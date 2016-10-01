@@ -4,21 +4,21 @@
              x:Class="MyWeather.View.WeatherView"
              Title="Weather">
     <StackLayout Padding="10" Spacing="10">
-      <Entry Text="{Binding Location}"/>
+      <Entry AutomationId="LocationEntry" Text="{Binding Location}"/>
       <StackLayout Orientation="Horizontal">
         <Label Text="Use Imperial"/>
-        <Switch IsToggled="{Binding IsImperial}"/>
+        <Switch AutomationId="ImperialSwitch" IsToggled="{Binding IsImperial}"/>
       </StackLayout>
       <StackLayout Orientation="Horizontal">
         <Label Text="Use GPS"/>
-        <Switch IsToggled="{Binding UseGPS}"/>
+        <Switch AutomationId="GpsSwitch" IsToggled="{Binding UseGPS}"/>
       </StackLayout>
-      <Button x:Name="WeatherButton" x:Id="Button1" AutomationId="WButton" Text="Get Weather" Command="{Binding GetWeatherCommand}"></Button>
+      <Button AutomationId="GetWeatherButton" Text="Get Weather" Command="{Binding GetWeatherCommand}"></Button>
 
-      <Label AutomationId="TempLabel" Text="{Binding Temp}" FontSize="30"/>
+      <Label AutomationId="TemperatureLabel" Text="{Binding Temp}" FontSize="30"/>
       <Label AutomationId="ConditionLabel" Text="{Binding Condition}"/>
 
-      <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+      <ActivityIndicator AutomationId="ActivityIndicator" IsRunning="{Binding IsBusy}"/>
     </StackLayout>
 </ContentPage>
 

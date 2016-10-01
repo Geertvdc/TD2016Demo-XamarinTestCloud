@@ -10,7 +10,7 @@ namespace MyWeather.UITest
     {
         public static IApp StartApp(Platform platform)
         {
-            var apkpath = "../../../MyWeather.Droid/bin/Release/MyWeather.Droid-Signed.apk";
+            var apkpath = "";//"../../../MyWeather.Droid/bin/Release/MyWeather.Droid-Signed.apk";
             if (platform == Platform.Android)
             {
                 return ConfigureApp
