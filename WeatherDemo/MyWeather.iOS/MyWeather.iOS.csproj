@@ -148,10 +148,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.20.3\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyWeather\MyWeather.csproj">
       <Name>MyWeather</Name>
+      <Project>{5366CC83-65A3-4969-B883-3229108447E2}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

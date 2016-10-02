@@ -9,7 +9,7 @@ using System.Diagnostics;
 namespace MyWeather.UITest
 {
     [TestFixture(Platform.Android)]
-    //[TestFixture(Platform.iOS)]
+    [TestFixture(Platform.iOS)]
     public class Tests
     {
         IApp app;

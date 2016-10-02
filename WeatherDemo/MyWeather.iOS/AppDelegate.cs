@@ -14,6 +14,10 @@ namespace MyWeather.iOS
 		
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
+			//#if ENABLE_TEST_CLOUD 
+			Xamarin.Calabash.Start();
+			//#endif 
+
             UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(43, 132, 211); //bar background
             UINavigationBar.Appearance.TintColor = UIColor.White; //Tint color of button items
             UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()
