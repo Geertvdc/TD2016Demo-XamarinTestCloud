@@ -18,32 +18,31 @@ namespace MyWeather.BDD
 		[Given(@"I opened the app")]
 		public void IOpenedTheApp()
 		{
-			app.Screenshot("First screen.");
+			app.Screenshot("Given I Opened the app");
 		}
 
 		[When("I have entered Amsterdam as a location")]
 		public void GiveInIHaveEnteredAmsterdamAsALocation()
 		{
 			app.Tap(x => x.Marked("LocationEntry"));
-			app.Screenshot("Location Entry Tapped");
 
 			app.ClearText(x => x.Marked("LocationEntry"));
 			app.EnterText(x => x.Marked("LocationEntry"), "Amsterdam");
-			app.Screenshot("Location Amsterdam entered");
+			app.Screenshot("When I have entered Amsterdam as a location");
 		}
 
 		[When("I set the Imperial switch to Off")]
 		public void ISetTheImperialSwitchToOff()
 		{
 			app.Tap(x => x.Marked("ImperialSwitch"));
-			app.Screenshot("Location Entry Tapped");
+			app.Screenshot("When I set the Imperial switch to Off");
 		}
 
 		[When("I press the Get Weather button")]
 		public void IPressTheGetWeatherButton()
 		{
 			app.Tap(x => x.Marked("GetWeatherButton"));
-			app.Screenshot("Get Weather Button Tapped");
+			app.Screenshot("When I press the Get Weather button");
 		}
 
 		[Then("the weather for Amsterdam should be shown in Celcius")]
@@ -51,7 +50,7 @@ namespace MyWeather.BDD
 		{
 			app.WaitForNoElement(x => x.Marked("ActivityIndicator"));
 			var temperatureLabel = app.WaitForElement(x => x.Marked("TemperatureLabel"));
-			app.Screenshot("Temperature retreived");
+			app.Screenshot("Then the weather for Amsterdam should be shown in Celcius");
 
 			var labelText = temperatureLabel[0].Text;
 			Assert.IsNotNullOrEmpty(labelText);
