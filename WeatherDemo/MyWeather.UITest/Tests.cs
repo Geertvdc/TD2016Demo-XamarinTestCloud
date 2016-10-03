@@ -125,10 +125,6 @@ namespace MyWeather.UITest
             app.Screenshot("Forecast overview");
         }
 
-
-
-        //app.WaitForElement(x => x.Marked("ConditionLabel"));
-
-    }
+	}
 }
 
