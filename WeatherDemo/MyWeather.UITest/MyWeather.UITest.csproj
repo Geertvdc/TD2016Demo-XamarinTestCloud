@@ -70,6 +70,12 @@
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\MyWeather.Droid\MyWeather.Android.csproj">
+      <Project>{65B45A0F-D6D8-432F-B36D-D7D41675DC76}</Project>
+      <Name>MyWeather.Android</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

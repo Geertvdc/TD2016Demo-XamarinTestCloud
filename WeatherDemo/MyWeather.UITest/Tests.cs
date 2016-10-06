@@ -87,8 +87,7 @@ namespace MyWeather.UITest
 
             app.ClearText(x => x.Marked("LocationEntry"));
             app.EnterText(x => x.Marked("LocationEntry"), "thisplacedoesnotexist");
-            app.Screenshot("Unknown Location entered");
-
+			app.Screenshot("Unknown Location entered");
             app.Tap(x => x.Marked("ImperialSwitch"));
             app.Screenshot("Location Entry Tapped");
 
